@@ -20,8 +20,8 @@ window.addEventListener("keydown", () => {
 const busImg = document.querySelector(".intro img");
 
 busImg.addEventListener('mouseenter', () => {
-    busImg.style.transform = "scale(1.5)";
-    busImg.style.transition = "all 0.3s";
+    busImg.style.transform = "scale(1.1)";
+    busImg.style.transition = "all 0.2s";
 })
 
 // #4 Mouseleave Event
@@ -76,4 +76,12 @@ window.addEventListener("keyup", () => {
 document.getElementsByClassName(".nav-link")
 addEventListener('click', (event) => {
     event.preventDefault();
+})
+
+// Stretch with GreenSock animation
+document.querySelectorAll('img').forEach( e => {
+    e.addEventListener('mouseenter', () => {
+        TweenMax.to(e, 0.2, {y:"+=15", shake:true, repeat:4});
+        TweenMax.to(e, 0.2, {y:"-=15", shake:true, repeat:4});
+    })
 })
