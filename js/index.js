@@ -1,7 +1,7 @@
 // #1: Mouseover Event
 document.querySelectorAll(".nav a").forEach(element => {
     element.addEventListener("mouseover", () => {
-        element.style.backgroundColor = "red";
+        element.style.backgroundColor = "lightblue";
 
     setTimeout(() => {
         element.style.backgroundColor = "";
@@ -28,3 +28,10 @@ busImg.addEventListener('mouseenter', () => {
 busImg.addEventListener('mouseleave', () => {
     busImg.style.transform = "scale(1)";
 })
+
+// #5 DblClick Event
+const funBus = document.querySelector(".intro h2");
+
+funBus.addEventListener("dblclick", () => {
+    funBus.textContent = "Big fun, tiny bus!"
+});
