@@ -58,9 +58,15 @@ const btnPush = document.querySelector('.btn')
     })
 
 // #9 Scroll Event with Stop Propagation
-document.addEventListener('scroll', function () {
+document.addEventListener("scroll", function () {
     document.querySelectorAll('h2').forEach (item => {
     item.style.color = "red";
     event.stopPropagation();
     })
+})
+
+// #10 Prevent Default
+document.getElementsByClassName(".nav-link")
+addEventListener('click', (event) => {
+    event.preventDefault();
 })
