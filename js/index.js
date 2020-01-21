@@ -65,7 +65,14 @@ document.addEventListener("scroll", function () {
     })
 })
 
-// #10 Prevent Default
+// #10 KeyUp Event
+window.addEventListener("keyup", () => {
+    const upText = document.querySelector(".logo-heading");
+    upText.style.color = "blue";
+    upText.textContent = "Press down for a joke!"
+});
+
+// #Prevent Default
 document.getElementsByClassName(".nav-link")
 addEventListener('click', (event) => {
     event.preventDefault();
