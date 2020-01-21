@@ -43,10 +43,11 @@ window.addEventListener('resize', () => {
     resizeImg.src = "./img/pineapple.jpg";
 });
 
-// #7 Mouseover Event
+// #7 Mouseover Event with Stop Propagation
 document.querySelectorAll(".text-content").forEach(mouseOver => {
-    mouseOver.addEventListener("mouseover", ()=> {
+    mouseOver.addEventListener("mouseover", (event)=> {
         mouseOver.style.backgroundColor = "grey";
+        event.stopPropagation();
     })
 })
 
@@ -55,3 +56,11 @@ const btnPush = document.querySelector('.btn')
     btnPush.addEventListener("click", () => {
         alert("Enjoy Your Trip!");
     })
+
+// #9 Scroll Event with Stop Propagation
+document.addEventListener('scroll', function () {
+    document.querySelectorAll('h2').forEach (item => {
+    item.style.color = "red";
+    event.stopPropagation();
+    })
+})
