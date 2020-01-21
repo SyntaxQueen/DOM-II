@@ -9,4 +9,9 @@ document.querySelectorAll(".nav a").forEach(element => {
     }, false);
 });
 
-// #2 
+// #2  Keydown 
+window.addEventListener("keydown", () => {
+    const downText = document.querySelector(".logo-heading");
+    downText.style.color = "blue";
+    downText.textContent = "Why are eggs not very much into jokes? Because they could crack up!"
+});
