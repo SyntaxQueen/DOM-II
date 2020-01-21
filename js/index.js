@@ -35,3 +35,23 @@ const funBus = document.querySelector(".intro h2");
 funBus.addEventListener("dblclick", () => {
     funBus.textContent = "Big fun, tiny bus!"
 });
+
+// #6 Resize Event
+const resizeImg = document.querySelector("img");
+
+window.addEventListener('resize', () => {
+    resizeImg.src = "./img/pineapple.jpg";
+});
+
+// #7 Mouseover Event
+document.querySelectorAll(".text-content").forEach(mouseOver => {
+    mouseOver.addEventListener("mouseover", ()=> {
+        mouseOver.style.backgroundColor = "grey";
+    })
+})
+
+// #8 Click Event
+const btnPush = document.querySelector('.btn')
+    btnPush.addEventListener("click", () => {
+        alert("Enjoy Your Trip!");
+    })
